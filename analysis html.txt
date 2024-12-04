@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Statistical Analysis and Calibration Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            background-color: #ecf0f1;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, button {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #dff9fb;
+            border: 1px solid #7ed6df;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pharmacy Statistical Analysis and Calibration Tool</h1>
+
+    <!-- Fisher's T-Test for Variances -->
+    <section id="fisher-variance-test">
+        <h2>Fisher's T-Test for Variances</h2>
+        <label for="dataset1">Dataset 1 (comma-separated values):</label>
+        <input type="text" id="dataset1" placeholder="e.g., 2.5, 3.1, 3.6">
+        <label for="dataset2">Dataset 2 (comma-separated values):</label>
+        <input type="text" id="dataset2" placeholder="e.g., 1.8, 2.2, 2.9">
+        <label for="test-type">Test Type:</label>
+        <select id="test-type">
+            <option value="two-sided">Two-Sided</option>
+            <option value="one-sided">One-Sided</option>
+        </select>
+        <button onclick="performFisherTest()">Calculate Fisher's T-Test</button>
+        <div id="fisher-result" class="result"></div>
+    </section>
+
+    <!-- Comparison with Reference Values -->
+    <section id="comparison-with-reference">
+        <h2>Comparison with Reference Values</h2>
+        <label for="sample-mean">Sample Mean:</label>
+        <input type="number" id="sample-mean" placeholder="Enter sample mean">
+        <label for="reference-value">Reference Value:</label>
+        <input type="number" id="reference-value" placeholder="Enter reference value">
+        <label for="reference-test-type">Test Type:</label>
+        <select id="reference-test-type">
+            <option value="two-sided">Two-Sided</option>
+            <option value="one-sided">One-Sided</option>
+        </select>
+        <button onclick="compareWithReference()">Compare with Reference</button>
+        <div id="reference-result" class="result"></div>
+    </section>
+
+    <!-- Student's T-Test for Averages -->
+    <section id="students-t-test">
+        <h2>Student's T-Test for Averages</h2>
+        <label for="sample1">Sample 1 (comma-separated values):</label>
+        <input type="text" id="sample1" placeholder="e.g., 2.5, 3.1, 3.6">
+        <label for="sample2">Sample 2 (comma-separated values):</label>
+        <input type="text" id="sample2" placeholder="e.g., 1.8, 2.2, 2.9">
+        <label for="t-test-type">Test Type:</label>
+        <select id="t-test-type">
+            <option value="paired">Paired</option>
+            <option value="unpaired">Unpaired</option>
+        </select>
+        <label for="variance-type">Variance Type:</label>
+        <select id="variance-type">
+            <option value="homocedastic">Homocedastic</option>
+            <option value="heterocedastic">Heterocedastic</option>
+        </select>
+        <label for="students-test-side">Test Side:</label>
+        <select id="students-test-side">
+            <option value="two-sided">Two-Sided</option>
+            <option value="one-sided">One-Sided</option>
+        </select>
+        <button onclick="performStudentsTTest()">Calculate Student's T-Test</button>
+        <div id="students-result" class="result"></div>
+    </section>
+
+    <!-- Linear Calibration and Concentration Calculation -->
+    <section id="linear-calibration">
+        <h2>Linear Calibration and Concentration Calculation</h2>
+        <label for="calibration-pairs">Calibration Pairs (x,y - comma-separated):</label>
+        <input type="text" id="calibration-pairs" placeholder="e.g., 1,2; 2,4; 3,6">
+        <label for="sample-signal">Sample Signal (y):</label>
+        <input type="number" id="sample-signal" placeholder="Enter sample signal">
+        <button onclick="performCalibration()">Perform Calibration</button>
+        <div id="calibration-result" class="result"></div>
+    </section>
+
+    <script>
+        // JavaScript for calculations will go here
+        function performFisherTest() {
+            // Placeholder for Fisher's T-Test implementation
+            document.getElementById('fisher-result').textContent = "Fisher's T-Test results will be displayed here.";
+        }
+
+        function compareWithReference() {
+            // Placeholder for Reference Comparison implementation
+            document.getElementById('reference-result').textContent = "Comparison results will be displayed here.";
+        }
+
+        function performStudentsTTest() {
+            // Placeholder for Student's T-Test implementation
+            document.getElementById('students-result').textContent = "Student's T-Test results will be displayed here.";
+        }
+
+        function performCalibration() {
+            // Placeholder for Calibration implementation
+            document.getElementById('calibration-result').textContent = "Calibration results will be displayed here.";
+        }
+    </script>
+</body>
+</html>
